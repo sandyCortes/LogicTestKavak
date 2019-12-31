@@ -1,0 +1,21 @@
+<div class="section main">
+  <div class="section card-container">
+    <div class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-body">
+            <form [formGroup]="registerForm">
+              Correo <input type="text" formControlName="email">
+              Nombre <input type="text" formControlName="name">
+              Apellido <input type="text" formControlName="lastName">
+              phone <input type="number" formControlName="phone">
+              Clave <input type="number" formControlName="key">
+              Contraseña <input type="password" formControlName="password">
+              <button class="button-style" (click)="Register()">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

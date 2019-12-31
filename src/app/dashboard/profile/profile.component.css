@@ -1,0 +1,35 @@
+.card-container {
+  margin-left: 300px;
+  margin-right: 100px;
+  padding-top: 150px;
+}
+
+.card {
+  width: 100%;
+}
+.image-content {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+
+form {
+  font-size: 16px;;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.button-style {
+  width: 50%;
+  font-size: 16px;
+  display: block;
+  margin: auto;
+  background: black;
+  border: black solid 1px;
+  border-radius: 20px;
+  color: aliceblue;
+}

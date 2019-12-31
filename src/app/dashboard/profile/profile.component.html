@@ -1,0 +1,68 @@
+<div class="section main">
+  <div class="section card-container">
+    <div class="row">
+      <div class="col s4">
+        <div class="card" style="width: 18rem;">
+          <img class="image-content" src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png"
+            class="card-img-top">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">{{UserData.email}}</li>
+              <li class="list-group-item">{{UserData.name}}</li>
+              <li class="list-group-item">{{UserData.lastName}}</li>
+              <li class="list-group-item">{{UserData.phone}}</li>
+              <li class="list-group-item">{{UserData.key}}</li>
+              <li class="list-group-item">***************</li>
+            </ul>
+            <button class="button-style" data-toggle="modal" data-target="#exampleModal">Editar</button>
+        </div>
+      </div>
+      <div class="col s10">
+        <table class="table" style="width: 100%;">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Title</th>
+              <th scope="col">Body</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let data of infoUser[0]">
+            <tr>
+              <td>{{data.id}}</td>
+              <td>{{data.title}}</td>
+              <td>{{data.body}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card-body">
+          <form [formGroup]="registerForm">
+            Correo <input type="email" formControlName="email" disableds>
+            Nombre <input type="text" formControlName="name">
+            Apellido <input type="text" formControlName="lastName">
+            phone <input type="number" formControlName="phone">
+            Clave <input type="number" formControlName="key">
+            Contraseña <input type="password" formControlName="password">
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="UploadInfo()">Guardar cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
